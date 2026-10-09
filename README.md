@@ -1,6 +1,6 @@
 
+## Weather Dashboard
 
-##Weather Dashboard
 Internship Task 3
 Weather Dashboard is a responsive weather web application built with HTML, CSS, and JavaScript. It features a soft pink floral design with flower-shaped cards that display real-time weather information.
 
