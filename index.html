@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloomy Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Weather</h1>
+        <p>A little sunshine, wherever you are.</p>
+    </header>
+
+    <main>
+        <form id="weatherForm">
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name..."
+                required
+            >
+            <button type="submit">Search</button>
+        </form>
+
+        <p id="message" role="status">Search for a city to see its weather.</p>
+
+        <section class="weather-garden" id="weatherGarden" hidden>
+
+            <article class="flower main-flower">
+                <div class="flower-center">
+                    <p id="cityName"></p>
+                    <h2 id="temperature">--°C</h2>
+                    <p id="condition"></p>
+                    <p id="feelsLike"></p>
+                </div>
+            </article>
+
+            <article class="flower">
+                <div class="flower-center">
+                    <h3>Humidity</h3>
+                    <p id="humidity">--%</p>
+                </div>
+            </article>
+
+            <article class="flower">
+                <div class="flower-center">
+                    <h3>Wind</h3>
+                    <p id="wind">-- km/h</p>
+                </div>
+            </article>
+
+            <article class="flower">
+                <div class="flower-center">
+                    <h3>Minimum</h3>
+                    <p id="minTemp">--°C</p>
+                </div>
+            </article>
+
+            <article class="flower">
+                <div class="flower-center">
+                    <h3>Maximum</h3>
+                    <p id="maxTemp">--°C</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>Made with spirit to learn by Akriti Singh!</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

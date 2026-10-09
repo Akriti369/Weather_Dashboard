@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff7fb, #ffe0ed, #fff4f8);
+    color: #8f2854;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    padding: 35px 15px 20px;
+}
+
+header h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: #c43f79;
+}
+
+header p {
+    margin-top: 8px;
+    color: #a45a7b;
+}
+
+main {
+    width: min(1000px, 94%);
+    margin: 25px auto;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    width: min(520px, 100%);
+    margin: 0 auto;
+    padding: 8px;
+    border: 1px solid #f5bfd4;
+    border-radius: 50px;
+    background: white;
+    box-shadow: 0 8px 25px #c94d7b18;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 17px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font: inherit;
+    color: #8f2854;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 35px;
+    background: #d94e88;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: #bd326e;
+    transform: translateY(-1px);
+}
+
+#message {
+    min-height: 28px;
+    margin: 18px 0;
+    color: #a45a7b;
+    font-size: 0.9rem;
+}
+
+.weather-garden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 25px 0 45px;
+}
+
+/* Flower made entirely with CSS gradients */
+.flower {
+    --petal: #ffc4dc;
+    --center: #fff0f6;
+
+    width: 220px;
+    aspect-ratio: 1;
+    position: relative;
+    display: grid;
+    place-items: center;
+    isolation: isolate;
+    filter: drop-shadow(0 9px 12px #c44a7918);
+}
+
+.flower::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 50% 18%, var(--petal) 0 19%, transparent 20%),
+        radial-gradient(circle at 72% 28%, var(--petal) 0 19%, transparent 20%),
+        radial-gradient(circle at 82% 50%, var(--petal) 0 19%, transparent 20%),
+        radial-gradient(circle at 72% 72%, var(--petal) 0 19%, transparent 20%),
+        radial-gradient(circle at 50% 82%, var(--petal) 0 19%, transparent 20%),
+        radial-gradient(circle at 28% 72%, var(--petal) 0 19%, transparent 20%),
+        radial-gradient(circle at 18% 50%, var(--petal) 0 19%, transparent 20%),
+        radial-gradient(circle at 28% 28%, var(--petal) 0 19%, transparent 20%);
+}
+
+.flower-center {
+    width: 59%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--center);
+    border: 2px solid #fff9fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    box-shadow: 0 0 15px #d54d8710;
+}
+
+.flower-center h2 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    line-height: 1.25;
+    color: #b52d69;
+}
+
+.flower-center h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.flower-center p {
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+}
+
+.flower-center h2 + p {
+    margin-top: 4px;
+}
+
+.main-flower {
+    width: 310px;
+    --petal: #ffb4d3;
+    --center: #fff1f7;
+}
+
+.main-flower .flower-center {
+    width: 62%;
+}
+
+.main-flower .flower-center h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.main-flower .flower-center p {
+    font-size: 0.82rem;
+}
+
+.flower:nth-child(2) {
+    --petal: #ffd1e3;
+}
+
+.flower:nth-child(3) {
+    --petal: #ffbfd8;
+}
+
+.flower:nth-child(4) {
+    --petal: #ffcde1;
+}
+
+.flower:nth-child(5) {
+    --petal: #ffb9d5;
+}
+
+footer {
+    padding: 25px 10px;
+    color: #a45a7b;
+    font-size: 0.85rem;
+    border-top: 1px solid #f7cadd;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding-top: 25px;
+    }
+
+    .weather-garden {
+        gap: 15px;
+    }
+
+    .main-flower {
+        width: min(310px, 88vw);
+    }
+
+    .flower:not(.main-flower) {
+        width: min(175px, 42vw);
+    }
+
+    .flower-center h3 {
+        font-size: 0.8rem;
+    }
+
+    .flower-center p {
+        font-size: 0.85rem;
+    }
+
+    button {
+        padding: 10px 17px;
+    }
+}
